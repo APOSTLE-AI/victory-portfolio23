@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--
+  This meta tag is a fallback only. The real, authoritative Content-Security-
+  Policy is set as an HTTP header in vercel.json, which is stronger (it can
+  also set X-Frame-Options, which no <meta> tag can do). This tag exists so
+  the same protection still applies even if this file is ever served from
+  somewhere that ignores vercel.json (GitHub Pages, a plain file, etc).
+  Keep the two in sync if you change one.
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Chijioke Victory · Writer, Researcher, Customer Experience</title>
+<meta name="description" content="Chijioke Victory (Helium C.) is a freelance writer with a science background in Aba, Nigeria, working across ghostwriting, SEO content, science communication, and remote customer support." />
+<link rel="canonical" href="https://your-domain.example/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Chijioke Victory · Writer, Researcher, Customer Experience" />
+<meta property="og:description" content="Freelance writer with a science background, working across ghostwriting, SEO content, science communication, and remote customer support." />
+<meta property="og:image" content="assets/og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chijioke Victory",
+  "alternateName": "Helium C.",
+  "url": "https://your-domain.example/",
+  "email": "mailto:chinazomchijioke2@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Aba", "addressRegion": "Abia State", "addressCountry": "Nigeria" },
+  "sameAs": ["https://www.linkedin.com/in/angel-chijioke-368409329", "https://www.fiverr.com/thecontentfarm"],
+  "jobTitle": "Writer & Customer Experience Professional"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span class="brand-name">Chijioke Victory</span>
+    </a>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Writing</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn" id="palette-btn" aria-label="Search this site">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35"/></svg>
+      </button>
+      <button type="button" class="icon-btn" id="theme-btn" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.28-.01-.56-.04-.83A5.5 5.5 0 0 1 12.83 3.04 9.13 9.13 0 0 0 12 3Z"/></svg>
+      </button>
+      <a class="btn btn-line btn-small" id="cv-link-header" href="assets/chijioke-victory-cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      <button type="button" class="icon-btn nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO ================================================================ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Chijioke Victory</h1>
+        <p class="hero-roles" id="hero-roles">Writer · Researcher · Customer Experience</p>
+        <p class="hero-lead" id="hero-lead"></p>
+
+        <div class="mode-toggle" role="group" aria-label="I'm reading this as">
+          <span class="mode-toggle-label">Reading this as a</span>
+          <button type="button" class="mode-btn is-active" data-mode="recruiter">Recruiter</button>
+          <button type="button" class="mode-btn" data-mode="client">Client / writing project</button>
+        </div>
+        <div class="mode-panel" id="mode-panel">
+          <p id="mode-summary"></p>
+          <ul id="mode-points"></ul>
+        </div>
+
+        <div class="hero-ctas">
+          <a class="btn btn-solid" id="hero-email" href="#contact">Get in touch</a>
+          <a class="btn btn-line" href="assets/chijioke-victory-cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+          <a class="btn btn-ghost" href="#work">Read the writing samples</a>
+        </div>
+
+        <p class="hero-meta">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+          <span id="hero-location"></span>
+        </p>
+      </div>
+
+      <aside class="status-panel" aria-label="What I'm currently working on">
+        <p class="status-panel-title">Right now</p>
+        <ul id="status-lines"></ul>
+        <blockquote class="pull-quote">
+          <p id="pull-quote-text"></p>
+          <cite id="pull-quote-caption"></cite>
+        </blockquote>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ABOUT ================================================================ -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <h2>A writer who already works like support, and vice versa.</h2>
+        <div id="about-paragraphs"></div>
+        <p class="about-linkedin">
+          I publish on LinkedIn as <a id="linkedin-link" href="#" target="_blank" rel="noopener noreferrer"></a>.
+        </p>
+      </div>
+      <aside class="fact-card">
+        <dl>
+          <div><dt>Location</dt><dd id="fact-location"></dd></div>
+          <div><dt>Availability</dt><dd id="fact-availability"></dd></div>
+          <div><dt>Channels</dt><dd>Email, live chat, async threads</dd></div>
+          <div><dt>Tools</dt><dd id="fact-tools" class="tag-row"></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- HOW I WORK =========================================================== -->
+  <section class="section alt" id="how">
+    <div class="wrap">
+      <h2>How the work actually happens</h2>
+      <p class="section-lead">Six steps, whether the deliverable is an article or a reply to an angry customer.</p>
+      <div class="work-steps" id="work-steps"></div>
+    </div>
+  </section>
+
+  <!-- SKILLS =============================================================== -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <h2>What I bring</h2>
+      <p class="section-lead">Grouped by where it applies. No invented proficiency scores, just what I actually do.</p>
+      <div class="filter-row" id="skills-filters" role="tablist" aria-label="Filter skills by category"></div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE =========================================================== -->
+  <section class="section alt" id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="timeline" id="timeline"></div>
+
+      <h3 class="sub-heading">Education</h3>
+      <ul class="education-list" id="education-list"></ul>
+    </div>
+  </section>
+
+  <!-- BOOKS / PUBLISHING ==================================================== -->
+  <section class="section" id="books">
+    <div class="wrap">
+      <h2>Writing &amp; publishing</h2>
+      <p class="section-lead">Written under the pen name Helium C. and independently published end to end: manuscript, formatting, and upload.</p>
+      <div id="books-groups"></div>
+    </div>
+  </section>
+
+  <!-- WRITING SAMPLES ======================================================= -->
+  <section class="section alt" id="work">
+    <div class="wrap">
+      <h2>Writing samples</h2>
+      <p class="section-lead">Full pieces, not snippets. Filter by category or open one to read it.</p>
+      <div class="filter-row" id="samples-filters" role="tablist" aria-label="Filter writing samples by category"></div>
+      <div class="samples-grid" id="samples-grid"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES =============================================================== -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2>What you can hire me for</h2>
+      <div class="services-grid" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT ================================================================ -->
+  <section class="section alt" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Get in touch</h2>
+        <p class="section-lead">This form doesn't hit a server. It opens your email app with everything already filled in, addressed to me directly.</p>
+        <form id="contact-form" class="contact-form">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" maxlength="100" required />
+
+          <label for="cf-reason">This is about</label>
+          <select id="cf-reason" name="reason">
+            <option value="A role">A role you're hiring for</option>
+            <option value="A writing project">A writing or research project</option>
+            <option value="Something else">Something else</option>
+          </select>
+
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" maxlength="4000" required></textarea>
+
+          <button type="submit" class="btn btn-solid">Open in my email app</button>
+        </form>
+      </div>
+      <aside class="contact-card">
+        <p class="contact-row"><span>Email</span><a id="contact-email" href="#"></a></p>
+        <p class="contact-row"><span>Phone</span><a id="contact-phone" href="#"></a></p>
+        <p class="contact-row"><span>LinkedIn</span><a id="contact-linkedin" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+        <p class="contact-row"><span>Fiverr</span><a id="contact-fiverr" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+        <p class="contact-row"><span>CV</span><a href="assets/chijioke-victory-cv.pdf" download="Chijioke-Victory-CV.pdf">Download PDF</a></p>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Chijioke Victory · <span id="footer-year"></span></p>
+    <p>Built as a plain, static site on purpose: easy to edit from anywhere, nothing to break.</p>
+  </div>
+</footer>
+
+<!-- Sample reading dialog -->
+<div class="dialog-backdrop" id="sample-backdrop" hidden>
+  <div class="dialog" id="sample-dialog" role="dialog" aria-modal="true" aria-labelledby="sample-dialog-title">
+    <button type="button" class="dialog-close" data-close aria-label="Close">&#215;</button>
+    <div class="dialog-scroll">
+      <p class="dialog-eyebrow" id="sample-dialog-dek"></p>
+      <h2 id="sample-dialog-title"></h2>
+      <p class="dialog-meta" id="sample-dialog-meta"></p>
+      <div class="dialog-body" id="sample-dialog-body"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Book detail dialog -->
+<div class="dialog-backdrop" id="book-backdrop" hidden>
+  <div class="dialog dialog-narrow" id="book-dialog" role="dialog" aria-modal="true" aria-labelledby="book-dialog-title">
+    <button type="button" class="dialog-close" data-close aria-label="Close">&#215;</button>
+    <div class="dialog-scroll">
+      <p class="dialog-eyebrow" id="book-dialog-series"></p>
+      <h2 id="book-dialog-title"></h2>
+      <p class="dialog-meta" id="book-dialog-meta"></p>
+      <p id="book-dialog-blurb"></p>
+      <p id="book-dialog-link"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Command palette -->
+<div class="dialog-backdrop palette-backdrop" id="palette-backdrop" hidden>
+  <div class="dialog palette" id="command-palette" role="dialog" aria-modal="true" aria-label="Search this site">
+    <input type="text" id="palette-input" placeholder="Jump to a section, sample, or book&hellip;" autocomplete="off" />
+    <ul id="palette-list"></ul>
+    <p class="palette-hint">&uarr;&darr; to move &middot; Enter to go &middot; Esc to close</p>
+  </div>
+</div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
